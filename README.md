@@ -14,3 +14,22 @@ Instead of hard coding strings in our code, we will read them in from environmen
 * [application.properties](src/main/resources/application.properties)
   * Take special note of the Name/Value pair in the top window
 * ![URI](URI.png)
+
+## Create User Example
+
+```shell
+curl -X POST http://localhost:8080/users -H "Content-Type: application/json" -d '{
+   "first_name":"John",
+   "last_name":"Doe",
+   "listings":[
+      {"name":"listing name",
+      "description":"listing description"}
+   ]
+}'
+```
+
+## Find User Example
+
+```shell
+curl http://localhost:8080/users/62c34324fc7d9c2abe3f4fc9
+```
