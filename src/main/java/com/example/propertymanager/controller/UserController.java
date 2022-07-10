@@ -20,9 +20,8 @@ public class UserController {
     }
 
     @PostMapping("/users")
-    public ResponseEntity<User> createUser(@RequestBody User user) {
-        User persistedUser = userService.createUser(user);
-        return ResponseEntity.ok(persistedUser);
+    public ResponseEntity<User> createUser(@RequestBody User user) {  
+        return ResponseEntity.ok(userService.createUser(user));
     }
 
     @GetMapping("/users/{id}")
